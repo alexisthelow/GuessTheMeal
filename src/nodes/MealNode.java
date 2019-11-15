@@ -1,10 +1,11 @@
 package nodes;
 
-public class MealNode extends Node {
+public class MealNode implements Node {
     
     // this class is only ever gonna be a leaf
     
-    private String mealName;
+    private String mealName;    // name of this meal
+    private Node parent;        // parent is only ever gonna be an ingredientnode
     
     public MealNode() {
         super();
@@ -20,6 +21,14 @@ public class MealNode extends Node {
 
     public void setMealName(String mealName) {
         this.mealName = mealName;
+    }
+
+    public Node getParent() {
+        return parent;
+    }
+
+    public void setParent(Node parent) {
+        this.parent = parent;
     }
     
 }
