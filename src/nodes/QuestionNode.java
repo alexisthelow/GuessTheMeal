@@ -1,32 +1,32 @@
 package nodes;
 
-public class IngredientNode implements Node {
+public class QuestionNode implements Node {
 
-    private String ingredient;  // name of ingredient
+    private String question;    // string containing this node's question
     private Node yes;           // might be another questionNode, might be a mealNode
     private Node no;            
     private Node parent;        // might be null sometimes
     
-    public IngredientNode() {
+    public QuestionNode() {
         super();
     }
     
-    public IngredientNode(String ingredient) {
-        this.ingredient = ingredient;
+    public QuestionNode(String question) {
+        this.question = question;
     }
     
-    public IngredientNode(String ingredient, Node yes, Node no) {
-        this.ingredient = ingredient;
+    public QuestionNode(String question, Node yes, Node no) {
+        this.question = question;
         this.yes = yes;
         this.no = no;
     }
     
-    public String getIngredient() {
-        return ingredient;
+    public String getQuestion() {
+        return question;
     }
     
-    public void setIngredient(String ingredient) {
-        this.ingredient = ingredient;
+    public void setQuestion(String question) {
+        this.question = question;
     }
     
     public Node getYes() {
