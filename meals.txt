@@ -1,0 +1,78 @@
+yes
+no
+Spaghetti
+does it have noodles
+no
+yes
+no
+no
+Eggplant
+Is it Vegetarian
+no
+yes
+no
+yes
+no
+Beet Salad
+does it contain lettuce
+no
+yes
+yes
+no
+no
+Tomato bisque
+is it a type of soup
+no
+yes
+no
+no
+no
+steak
+does it contain beef
+no
+yes
+no
+no
+yes
+no
+Hamburger
+does it have a bun
+no
+yes
+yes
+no
+no
+no
+Chili
+Does it contain beans
+no
+yes
+no
+no
+yes
+yes
+yes
+yes
+no
+no
+no
+no
+Salmon
+is it seafood
+no
+yes
+yes
+no
+no
+no
+no
+Tomato Omlette
+Does it have eggs
+no
+yes
+yes
+no
+no
+yes
+yes
+no
