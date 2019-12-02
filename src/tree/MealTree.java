@@ -14,7 +14,7 @@ public class MealTree {
     public void buildDefault() {
         MealNode pizza = new MealNode("pizza");
         MealNode chickenSoup = new MealNode("chicken soup");
-        QuestionNode tomatoSauce = new QuestionNode("tomato sauce", pizza, chickenSoup);
+        QuestionNode tomatoSauce = new QuestionNode("Does the meal have tomato sauce?", pizza, chickenSoup);
         chickenSoup.setParent(tomatoSauce);
         pizza.setParent(tomatoSauce);
         this.root = tomatoSauce;
@@ -61,6 +61,14 @@ public class MealTree {
         
         // i think we're done now
         
+    }
+
+    public QuestionNode getRoot() {
+        return root;
+    }
+
+    public void setRoot(QuestionNode root) {
+        this.root = root;
     }
     
 }
