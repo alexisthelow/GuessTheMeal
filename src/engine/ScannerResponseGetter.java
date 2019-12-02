@@ -9,8 +9,7 @@ import java.util.Scanner;
  */
 public class ScannerResponseGetter {
 	
-	Scanner kb = new Scanner(System.in); // the Scanner which is used in all but one
-	                                     // of these methods
+	Scanner kb = new Scanner(System.in); // the Scanner which is used in every method
 	
 	/**
 	 * prompts a user to input an integer within a specified range.
