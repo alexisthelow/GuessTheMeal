@@ -1,0 +1,158 @@
+Shall we process meals.txt?: yes
+Does the meal have tomato sauce?
+~meals.txt: yes
+Are you thinking of pizza?
+~meals.txt: no
+What meal were you thinking of?:
+~meals.txt: Spaghetti
+What is a question that distinguishes pizza from Spaghetti?:
+~meals.txt: does it have noodles
+What is the correct answer for pizza?:
+~meals.txt: no
+Do you want to play again?:
+~meals.txt: yes
+Does the meal have tomato sauce?
+~meals.txt: no
+Are you thinking of chicken soup?
+~meals.txt: no
+What meal were you thinking of?:
+~meals.txt: Eggplant
+What is a question that distinguishes chicken soup from Eggplant?:
+~meals.txt: Is it Vegetarian
+What is the correct answer for chicken soup?:
+~meals.txt: no
+Do you want to play again?:
+~meals.txt: yes
+Does the meal have tomato sauce?
+~meals.txt: no
+Is it Vegetarian
+~meals.txt: yes
+Are you thinking of Eggplant?
+~meals.txt: no
+What meal were you thinking of?:
+~meals.txt: Beet Salad
+What is a question that distinguishes Eggplant from Beet Salad?:
+~meals.txt: does it contain lettuce
+What is the correct answer for Eggplant?:
+~meals.txt: no
+Do you want to play again?:
+~meals.txt: yes
+Does the meal have tomato sauce?
+~meals.txt: yes
+does it have noodles
+~meals.txt: no
+Are you thinking of pizza?
+~meals.txt: no
+What meal were you thinking of?:
+~meals.txt: Tomato bisque
+What is a question that distinguishes pizza from Tomato bisque?:
+~meals.txt: is it a type of soup
+What is the correct answer for pizza?:
+~meals.txt: no
+Do you want to play again?:
+~meals.txt: yes
+Does the meal have tomato sauce?
+~meals.txt: no
+Is it Vegetarian
+~meals.txt: no
+Are you thinking of chicken soup?
+~meals.txt: no
+What meal were you thinking of?:
+~meals.txt: steak
+What is a question that distinguishes chicken soup from steak?:
+~meals.txt: does it contain beef
+What is the correct answer for chicken soup?:
+~meals.txt: no
+Do you want to play again?:
+~meals.txt: yes
+Does the meal have tomato sauce?
+~meals.txt: no
+Is it Vegetarian
+~meals.txt: no
+does it contain beef
+~meals.txt: yes
+Are you thinking of steak?
+~meals.txt: no
+What meal were you thinking of?:
+~meals.txt: Hamburger
+What is a question that distinguishes steak from Hamburger?:
+~meals.txt: does it have a bun
+What is the correct answer for steak?:
+~meals.txt: no
+Do you want to play again?:
+~meals.txt: yes
+Does the meal have tomato sauce?
+~meals.txt: yes
+does it have noodles
+~meals.txt: no
+is it a type of soup
+~meals.txt: no
+Are you thinking of pizza?
+~meals.txt: no
+What meal were you thinking of?:
+~meals.txt: Chili
+What is a question that distinguishes pizza from Chili?:
+~meals.txt: Does it contain beans
+What is the correct answer for pizza?:
+~meals.txt: no
+Do you want to play again?:
+~meals.txt: yes
+Does the meal have tomato sauce?
+~meals.txt: no
+Is it Vegetarian
+~meals.txt: no
+does it contain beef
+~meals.txt: yes
+does it have a bun
+~meals.txt: yes
+Are you thinking of Hamburger?
+~meals.txt: yes
+Do you want to play again?:
+~meals.txt: yes
+Does the meal have tomato sauce?
+~meals.txt: no
+Is it Vegetarian
+~meals.txt: no
+does it contain beef
+~meals.txt: no
+Are you thinking of chicken soup?
+~meals.txt: no
+What meal were you thinking of?:
+~meals.txt: Salmon
+What is a question that distinguishes chicken soup from Salmon?:
+~meals.txt: is it seafood
+What is the correct answer for chicken soup?:
+~meals.txt: no
+Do you want to play again?:
+~meals.txt: yes
+Does the meal have tomato sauce?
+~meals.txt: yes
+does it have noodles
+~meals.txt: no
+is it a type of soup
+~meals.txt: no
+Does it contain beans
+~meals.txt: no
+Are you thinking of pizza?
+~meals.txt: no
+What meal were you thinking of?:
+~meals.txt: Tomato Omlette
+What is a question that distinguishes pizza from Tomato Omlette?:
+~meals.txt: Does it have eggs
+What is the correct answer for pizza?:
+~meals.txt: no
+Do you want to play again?:
+~meals.txt: yes
+Does the meal have tomato sauce?
+~meals.txt: yes
+does it have noodles
+~meals.txt: no
+is it a type of soup
+~meals.txt: no
+Does it contain beans
+~meals.txt: yes
+Are you thinking of Chili?
+~meals.txt: yes
+Do you want to play again?:
+~meals.txt: no
+Thanks for playing! Goodbye!
