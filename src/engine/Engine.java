@@ -1,7 +1,12 @@
 package engine;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
 import nodes.MealNode;
@@ -43,6 +48,29 @@ public class Engine {
         // are we playing the game, or processing Dr. Gordon's meals.txt?
         boolean processMeals = srg.requestConfirmation("Shall we process meals.txt?: ");
         
+        if (!processMeals) { // if we're not using meals.txt, are we loading a saved game?
+            
+            boolean loadGame = srg.requestConfirmation("Do you want to load the saved game?: ");
+            
+            if (loadGame) {
+                try {
+                    FileInputStream file = new FileInputStream("tree.sav");
+                    ObjectInputStream in = new ObjectInputStream(file);
+                    MealTree loadedGame = (MealTree) in.readObject();
+                    in.close();
+                    file.close();
+                    this.tree = loadedGame;
+                    System.out.println("Game loaded successfully!");
+                    
+                } catch (Exception e) {
+                    System.out.println("Saved game not found!");
+                    System.out.println(e.getMessage());
+                    e.printStackTrace();
+                }
+            }
+            
+        }
+        
         
         if (processMeals) { // we're using meals.txt -- use modified loop
             
@@ -54,7 +82,7 @@ public class Engine {
                 e.printStackTrace();
             }
             
-            do { // run through once
+            do { // start of meals.txt processing loop
                 gameOver = false;
                 currentNode = tree.getRoot(); // work starts from the root
                 
@@ -137,10 +165,8 @@ public class Engine {
                 System.out.print("~meals.txt: ");
                 System.out.println(playAgain == true ? "yes" : "no");
                 
-            } while (playAgain);
+            } while (playAgain); // end of meals.txt processing loop
             // if we get here we're not playing again--time to clean up
-            
-            // TODO when serialization is added, announce that the game is being saved
             // close scanner, because it's important to be tidy
             srg.close();
             // say goodbye
@@ -212,10 +238,28 @@ public class Engine {
                 // ask if player wants to play again, set playAgain to response
                 playAgain = srg.requestConfirmation("Do you want to play again?: ");
                 
-            } while (playAgain);
+            } while (playAgain); // end of player loop
             // if we get here we're not playing again--time to clean up
             
             // TODO when serialization is added, announce that the game is being saved
+            boolean saveGame = srg.requestConfirmation("Do you want to save the game?: ");
+            if (saveGame) {
+                String fileName = "tree.sav";
+                System.out.println("Saving. Please wait...");
+                try {
+                    FileOutputStream file = new FileOutputStream(fileName);
+                    ObjectOutputStream out = new ObjectOutputStream(file);
+                    
+                    out.writeObject(tree);
+                    
+                    out.close();
+                    file.close();
+                } catch (IOException e) {
+                    System.out.println(e.getMessage());
+                    e.printStackTrace();
+                }
+                System.out.println("Game saved!");
+            }
             // close scanner, because it's important to be tidy
             srg.close();
             // say goodbye
