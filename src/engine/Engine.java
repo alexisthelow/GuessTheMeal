@@ -217,16 +217,26 @@ public class Engine {
                             // ask what player was thinking of
                             String newMeal = srg.stringRequest("What meal were you thinking of?: ");
                             
-                            // prompt for differentiation question
-                            String newQuestion = srg.stringRequest("What is a question that distinguishes " + 
-                                    m.getMealName() + " and " + newMeal + "?: ");
+                            boolean playerIsALiar = tree.lookForMeal(newMeal, tree.getRoot());
                             
-                            // ask "what is the correct answer for [meal comp guessed]? (true if yes, false if no)"
-                            boolean yesOrNo = srg.requestConfirmation("What is the correct answer to that question for " +
-                                    m.getMealName() + "?: ");
-                            
-                            // call tree.addMeal(currentNode, newMeal, newQuestion, yesOrNo)
-                            tree.addMeal(m, newMeal, newQuestion, yesOrNo);
+                            if (playerIsALiar) { 
+                                
+                                System.out.println("WHAT?! I already know about " + newMeal + "!!!");
+                                
+                            } else {
+                                
+                                // prompt for differentiation question
+                                String newQuestion = srg.stringRequest("What is a question that distinguishes " + 
+                                        m.getMealName() + " and " + newMeal + "?: ");
+                                
+                                // ask "what is the correct answer for [meal comp guessed]? (true if yes, false if no)"
+                                boolean yesOrNo = srg.requestConfirmation("What is the correct answer to that question for " +
+                                        m.getMealName() + "?: ");
+                                
+                                // call tree.addMeal(currentNode, newMeal, newQuestion, yesOrNo)
+                                tree.addMeal(m, newMeal, newQuestion, yesOrNo);
+
+                            }
                         }
                         
                         // if we guessed correctly, we just allow the loop to finish 
