@@ -1,11 +1,14 @@
 package tree;
 
-import nodes.QuestionNode;
-import nodes.MealNode;
+import java.io.Serializable;
 
-public class MealTree {
+import nodes.MealNode;
+import nodes.QuestionNode;
+
+public class MealTree implements Serializable {
     
-    private QuestionNode root;
+    private static final long serialVersionID = 1L; // version number for serialization
+    private QuestionNode root; // top node of this tree
     
     public MealTree() {
         super();
