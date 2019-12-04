@@ -3,6 +3,7 @@ package tree;
 import java.io.Serializable;
 
 import nodes.MealNode;
+import nodes.Node;
 import nodes.QuestionNode;
 
 public class MealTree implements Serializable {
@@ -64,6 +65,27 @@ public class MealTree implements Serializable {
         
         // i think we're done now
         
+    }
+    
+    /**
+     * checks the tree to see if the given meal name is present.
+     * 
+     * @param mealName      a String containing the name of the meal to search for
+     * @return              true if it is found; false if not
+     */
+    public boolean lookForMeal(String mealName, Node node) {
+        
+        if (node instanceof MealNode) { // if it's a meal node we don't want to try and check children
+            if (((MealNode) node).getMealName().equalsIgnoreCase(mealName)) { // the node's meal matches given meal
+                return true;
+            } else { // it doesn't
+                return false;
+            }
+            
+        }
+        // if we get here it's definitely a question node.
+        // check both Yes and No paths; if either is true, return true
+        return lookForMeal(mealName, ((QuestionNode) node).getYes()) || lookForMeal(mealName, ((QuestionNode) node).getNo());
     }
 
     public QuestionNode getRoot() {
