@@ -1,7 +1,10 @@
 package nodes;
 
-public class QuestionNode implements Node {
+import java.io.Serializable;
 
+public class QuestionNode implements Node, Serializable {
+
+    private static final long serialVersionID = 1L; // serial ID for saving game
     private String question;    // string containing this node's question
     private Node yes;           // might be another questionNode, might be a mealNode
     private Node no;            

@@ -1,9 +1,11 @@
 package nodes;
 
-public class MealNode implements Node {
+import java.io.Serializable;
+
+public class MealNode implements Node, Serializable {
     
     // this class is only ever gonna be a leaf
-    
+    private static final long serialVersionID = 1L; // serial ID for saving game
     private String mealName;    // name of this meal
     private Node parent;        // parent is only ever gonna be an ingredientnode
     
